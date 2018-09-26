@@ -144,6 +144,109 @@ body {
     }
   }
 }
+/* <------------------------- 4.Header / Carousel --------------------------->*/
+.header {
+  height: 65rem;
+  position: relative;
+  background: #9b9b9b;
+
+  .carousel {
+    .fas {
+      font-size: 3.6rem;
+    }
+    .carousel-control-prev {
+      .fas {
+        position: relative;
+        left: -2rem;
+      }
+      @include trans();
+      &:hover .fas {
+        color: #ffda1a;
+        transform-origin: 100% 50%;
+        transform: scale(1.2);
+      }
+    }
+    .carousel-control-next {
+      .fas {
+        position: relative;
+        left: 2rem;
+      }
+      @include trans();
+      &:hover .fas {
+        color: #ffda1a;
+        transform-origin: 0% 50%;
+        transform: scale(1.2);
+      }
+    }
+
+    &__img1 {
+      width: 100%;
+      height: 65rem;
+      background: url(../img/big_foto1.png) center center no-repeat;
+      background-size: cover;
+    }
+    &__img2 {
+      width: 100%;
+      height: 65rem;
+      background: url(../img/big_foto2.png) center center no-repeat;
+      background-size: cover;
+    }
+    &__img3 {
+      width: 100%;
+      height: 65rem;
+      background: url(../img/big_foto3.png) center center no-repeat;
+      background-size: cover;
+    }
+    &__img4 {
+      width: 100%;
+      height: 65rem;
+      background: url(../img/big_foto4.jpg) center center no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__text-box {
+    width: 67rem;
+    position: absolute;
+    @include centerAbsolute(50%, 54%);
+    text-align: center;
+    & .heading-primary {
+      margin-bottom: 2rem;
+    }
+
+    &--main {
+      font-size: 5.6rem;
+      line-height: 6.7rem;
+      letter-spacing: 0.2rem;
+      font-weight: 700;
+      margin-bottom: 2.8rem;
+    }
+    &--sub {
+      font-size: 5.6rem;
+      color: #ffffff;
+      letter-spacing: 0.2rem;
+      line-height: 6.7rem;
+      font-weight: 300;
+      margin-bottom: 2.8rem;
+    }
+    &--button {
+      font-size: 2.4rem;
+      width: 18rem;
+      height: 5rem;
+      background: none;
+      border: 2px solid #ffda1a;
+      border-radius: 100px;
+      color: #ffffff;
+      @include trans();
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-0.3rem);
+        background: #ffda1a;
+        box-shadow: 0px 2px 7px -1px rgba(27, 92, 222, 0.9);
+      }
+    }
+  }
+}
 
 @import "_mediaQuery";
 // //=======================================================================================
