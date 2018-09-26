@@ -263,5 +263,217 @@ body {
     }
   }
 }
+/* <------------------------- 3.First-row--------------------------->*/
+.first-row {  
+
+  &:hover .first-row__img--bottom{
+    box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.75);
+  }
+  &:hover .first-row__img--top{
+    box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.75);
+  }
+  
+    &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70rem;
+      position: relative;
+  
+      &--top {
+        @include centerAbsolute(45%, 50%);
+        width: 60rem;
+        height: 60rem;
+        z-index: 200;
+        transition: 0.2s ease-in-out;
+      }
+  
+      &--bottom {
+        @include centerAbsolute(50%, 65%);
+        width: 60rem;
+        height: 60rem;
+        z-index: 100;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  
+    &__description {
+      height: 70rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+      &--title {
+        align-self: flex-start;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 7rem;
+        width: 40rem;
+        color: $first-color;
+        margin-bottom: 2.5rem;
+        margin-left: 1rem;
+      }
+  
+      &--sub {
+        width: 60rem;
+        font-size: 2.2rem;
+        line-height: 3.5rem;
+        color: $five-color;
+      }
+    }
+  }
+  
+  /* <------------------------- 4.second-row--------------------------->*/
+  .second-row {
+    background: $third-color;
+    position: relative;
+    right: 10rem; 
+  
+    &:hover .second-row__img--top{
+      box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.75);
+    }
+  
+    &:before {
+      content: '';
+      position: absolute;
+      top: 5rem;
+      right: -1rem;
+      z-index: 1000;
+      width: 1rem;
+      height: 35rem;
+      background: $first-color;
+    }
+  
+    & .rowBox {
+      position: relative;
+      right: -10rem;
+    }
+  
+    &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70rem;
+  
+      &--top {
+        position: relative;
+        left: 3.5rem;
+        width: 60rem;
+        height: 60rem;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  
+    &__description {
+      height: 70rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+      &--title {
+        align-self: flex-start;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 7rem;
+        width: 40rem;
+        margin-bottom: 2.5rem;
+        margin-left: 1rem;
+        color: $first-color;
+      }
+  
+      &--sub {
+        margin-left: 5.5rem;
+        width: 60rem;
+        font-size: 2.2rem;
+        line-height: 3.7rem;
+        color: $five-color;
+      }
+    }
+  }
+  
+  /* <------------------------- 5.four-row--------------------------->*/
+  .four-row {
+    background: $first-color;
+    position: relative;
+    left: 10rem; 
+  
+    &:hover .four-row__img--top{
+      box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.75);
+    }
+  
+    &:before {
+      content: '';
+      position: absolute;
+      top: 5rem;
+      left: -1rem;
+      z-index: 1000;
+      width: 1rem;
+      height: 35rem;
+      background: $six-color;
+    }
+  
+    & .rowBox {
+      position: relative;
+      left: -10rem;
+    }
+  
+    &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70rem;
+      position: relative;
+  
+      &--top {
+        position: relative;
+        left: 3.5rem;
+        width: 60rem;
+        height: 60rem;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  
+    &__description {
+      height: 70rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+      &--title {
+        align-self: flex-start;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 7rem;
+        width: 40rem;
+        margin-bottom: 2.5rem;
+        margin-left: 1rem;
+        color: $second-color;
+      }
+  
+      &--sub {
+        margin-left: 5.5rem;
+        width: 60rem;
+        font-size: 2.2rem;
+        line-height: 3.7rem;
+        color: $second-color;
+      }
+    }
+  }
+  
+  /* <------------------------- 6.five-row--------------------------->*/
+  .five-row {
+    &__img {
+      &--top {
+        @include centerAbsolute(50%, 50%);
+      }
+  
+      &--bottom {
+        @include centerAbsolute(45%, 65%);
+      }
+    }
+  }
 
 @import "_mediaQuery";
