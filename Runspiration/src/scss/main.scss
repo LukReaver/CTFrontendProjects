@@ -673,6 +673,35 @@ body {
     }
   }
 }
+/* <------------------------- 9.footer-row--------------------------->*/
+.footer {
+  padding: 3rem 0rem;
 
+  &__title {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    color: $six-color;
+  }
 
+  &__line {
+    background: $first-color;
+    width: 5rem;
+  }
+
+  &__nav {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: $five-color;
+
+    & .nav-link {
+      padding: 0;
+      color: $five-color;
+
+      &:hover {
+        color: $first-color;
+      }
+    }
+  }
+}
+/* <------------------------- 10.media-query--------------------------->*/
 @import "_mediaQuery";
