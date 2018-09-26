@@ -42,5 +42,226 @@ body {
   margin: 0;
 }
 
+.navbar {
+  font-size: 1.9rem;
+  font-weight: 600;
+  padding: 2rem 3rem;
+
+  &-brand {
+    display: block;
+    width: 25rem;
+    height: 4.5rem;
+    margin-left: 1.5rem;
+    background: url(../img/logo.png) center center no-repeat;
+    background-size: 100% 100%;
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      background: url(../img/logoH.png) center center no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  &-nav {
+    & .nav-item {
+      padding: 0rem 1.4rem;
+
+      & .nav-link {
+        padding: 0.3rem 1.2rem;
+        transition: 0.2s ease-in-out;
+        color: $second-color;
+
+        &:hover {
+          border-radius: 10rem;
+          background: $first-color;
+          color: $second-color;
+        }
+
+        &--bg {
+          border-radius: 10rem;
+          background: $second-color;
+          color: $first-color;
+        }
+
+        &--border {
+          border-radius: 10rem;
+          padding: 0.1rem 1.2rem;
+          border: 0.3rem solid $first-color;
+
+          & img {
+            transition: 0.3s ease-in-out;
+          }
+
+          &:hover img {
+            transform: rotateY(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  & .nav {
+    &-social {
+      transition: 0.3s ease-in-out;
+      padding: 0.3rem;
+      font-size: 2.5rem;
+      color: $second-color;
+
+      &:hover {
+        border-radius: 10rem;
+        transform: rotate(360deg);
+        background: none;
+      }
+    }
+
+    &-language {
+      color: $second-color;
+      padding-left: 3rem;
+
+      &:hover {
+        color: $five-color;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    height: 4.5rem;
+    width: 6rem;
+    // position: relative;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  .animated-icon {
+    width: 100%;
+    height: 100%;
+    // position: absolute;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  .animated-icon span {
+    display: block;
+    position: absolute;
+    height: 0.5rem;
+    width: 100%;
+    border-radius: 0.9rem;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+
+  .animated-icon span {
+    background: black;
+  }
+
+  .animated-icon span:nth-child(1) {
+    top: 0rem;
+  }
+
+  .animated-icon span:nth-child(2),
+  .animated-icon span:nth-child(3) {
+    top: 1.5rem;
+  }
+
+  .animated-icon span:nth-child(4) {
+    top: 3rem;
+  }
+
+  .animated-icon.open span:nth-child(1) {
+    top: 1.1rem;
+    width: 0%;
+    left: 50%;
+  }
+
+  .animated-icon.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .animated-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .animated-icon.open span:nth-child(4) {
+    top: 1.1rem;
+    width: 0%;
+    left: 50%;
+  }
+}
+
+/* <------------------------- 2.Header --------------------------->*/
+.header {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/headerBg.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &__text-box {
+    width: 95rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    & .heading-primary {
+      margin-bottom: 3rem;
+    }
+
+    &--main {
+      font-size: 6rem;
+      font-weight: 700;
+      line-height: 7rem;
+    }
+
+    &--sub {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      letter-spacing: 0.1rem;
+    }
+
+    &--button {
+      transform: rotate(90deg);
+      border-radius: 50%;
+      filter: brightness(5);
+      transition: 0.1s ease-in-out;
+      width: 6rem;
+      height: 6rem;
+      background: url(../img/arrow.png) center center no-repeat;
+      background-size: 100% 100%;
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(1);
+        transform: rotate(90deg) scale(1.1);
+      }
+    }
+  }
+}
 
 @import "_mediaQuery";
