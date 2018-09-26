@@ -462,6 +462,19 @@ body {
       }
     }
   }
+  
+  /* <------------------------- 6.five-row--------------------------->*/
+  .five-row {
+    &__img {
+      &--top {
+        @include centerAbsolute(50%, 50%);
+      }
+      
+      &--bottom {
+        @include centerAbsolute(45%, 65%);
+      }
+    }
+  }
   /* <------------------------- 7.examples-row--------------------------->*/
 .realization-example {
   height: 70rem;
@@ -543,18 +556,123 @@ body {
     }
   }
 }
-  
-  /* <------------------------- 6.five-row--------------------------->*/
-  .five-row {
-    &__img {
-      &--top {
-        @include centerAbsolute(50%, 50%);
+/* <------------------------- 8.form-row--------------------------->*/
+.form-row {
+  height: 70rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  background: url(../img/form.png);
+  background-size: 100% 100%;
+
+  &__title {
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 2.3rem;
+    color: $first-color;
+    margin-bottom: 2.5rem;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &--input {
+      width: 62.5rem;
+      height: 4.5rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 2.3rem;
+      color: $six-color;
+      padding: 0.5rem 1rem;
+      border: 0.1rem solid $five-color;
+      background: transparent;
+    }
+
+    &--textarea {
+      width: 62.5rem;
+      height: 15rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 2.3rem;
+      color: $six-color;
+      padding: 0.5rem 1rem;
+      border: 0.1rem solid $five-color;
+      background: transparent;
+    }
+
+    &--reg {
+      width: 62.5rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1rem;
+      margin-bottom: 3rem;
+
+      & .btn-attachment {
+        background: $first-color;
+        color: $second-color;
+        font-size: 1.4rem;
+        line-height: 2.3rem;
+        padding: 0rem 1.5rem;
+        border-radius: 5rem;
+
+        &:hover {
+          background: $first-dark-color;
+        }
       }
+
+      .reg-check {
+        display: flex;
+        align-items: center;
+        #trigger {
+          display: none;
+        }
   
-      &--bottom {
-        @include centerAbsolute(45%, 65%);
+        .checker {
+          background: url(../img/czekno.png) left top no-repeat;
+          background-size: 100% 100%;
+          width: 1.6rem;
+          height: 1.6rem;
+          margin-right: 0.7rem;
+          margin-top: 0.4rem;;
+        }
+  
+        #trigger:checked+.checker {
+          background: url(../img/czekok.png) left top no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        & .description {
+          font-size: 1.4rem;
+          font-weight: 500;
+          margin: 0;
+          color: $six-color;
+        }
+      }
+     
+    }
+
+    &--submit {
+      font-size: 3rem;
+      line-height: 5rem;
+      background: transparent;
+      color: $first-color;
+      padding: 0rem 3rem;
+      border: 0.3rem solid $first-color;
+      border-radius: 10rem;
+
+      &:hover {
+        background: $first-color;
+        color: $second-color;
       }
     }
   }
+}
+
 
 @import "_mediaQuery";
