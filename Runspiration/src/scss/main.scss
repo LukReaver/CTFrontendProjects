@@ -1,0 +1,46 @@
+@import "_varibles";
+@import "_mixin";
+
+ //@import "_animation"; 
+/*
+1.Global;
+2.Navbar;
+3.Header;
+4.First-row;
+5.second-row;
+6.four-row;
+7.five-row;
+8.examples;
+9.form
+10.MediaQueries;
+*/
+/* <------------------------- 1.Global --------------------------->*/
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  max-width: 1920px;
+  color: $second-color;
+}
+
+.row,
+.col,
+[class*="col-"] {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin: 0;
+}
+
+
+@import "_mediaQuery";
