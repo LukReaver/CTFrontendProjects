@@ -616,5 +616,56 @@ body {
   margin: 5rem 0rem;
 }
 
+/* <------------------------- 8.Footer --------------------------->*/
+.footer {
+  background: #000;
+  padding: 1.5rem 3rem 2.2rem;
+
+  .nav-link {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    letter-spacing: 0.05rem;
+    line-height: 3rem;
+    padding: 0.2rem 0rem;
+    &:hover {
+      color: #ffda1a;
+    }
+  }
+
+  .copyright {
+    text-align: right;
+    font-size: 1.4rem;
+    color: #9b9b9b;
+    letter-spacing: 0.05rem;
+  }
+
+  &__information {
+    font-size: 1.6rem;
+    color: #ffffff;
+    letter-spacing: 0.05rem;
+    line-height: 3rem;
+
+    img {
+      margin-right: 1rem;
+      width: 2rem;
+    }
+    &--noicon {
+      margin-left: 2rem;
+    }
+  }
+  &__links {
+    font-size: 1.6rem;
+    letter-spacing: 0.05rem;
+    line-height: 3rem;
+    &--link {
+      color: #ffda1a !important;
+      &:hover {
+        color: #ffda1a;
+      }
+    }
+  }
+}
+/* <------------------------- 9.Media Queries --------------------------->*/
 @import "_mediaQuery";
 // //=======================================================================================
