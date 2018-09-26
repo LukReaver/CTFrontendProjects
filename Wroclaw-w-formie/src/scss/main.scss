@@ -1,0 +1,149 @@
+@import "_mixin";
+@import "_varibles";
+/*
+1.Global;
+2.Navbar/MobileMenu;
+3.Header/Carousel;
+4.YellowIcon;
+5.TitleSection;
+6.Articles;
+7.Slider;
+8.Footer;
+9.MediaQueries;
+*/
+
+/* <------------------------- 1.Global --------------------------->*/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* <------------------------- 3.Navbar / mobileMenu --------------------------->*/
+.navbar {
+  @include trans;
+  transition: all 0.2s ease-in-out; 
+  padding: 1rem;
+ 
+      .navbar-brand {    
+            width: 12rem;     
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .navbar-toggler {
+      border: none;     
+      height: 4.5rem;
+      width: 5rem;
+      position: relative;
+      z-index: 7000;    
+    }
+    .navbar-toggler:focus {
+      outline: none;
+    }
+
+    .button_container {
+      display: block;     
+      position: absolute;
+      top: 0%;      
+      left: 0%;
+      height: $button-height;
+      width: $button-width;     
+      transition: opacity 0.25s ease;
+      
+      &:hover {
+        opacity: 0.7;
+      }
+      
+      &.active {
+        z-index: 6000;
+        .top {
+          transform: translateY(1.85rem) translateX(0) rotate(45deg);
+          background: $color-toggle;          
+        }
+        .middle {
+          opacity: 0;
+          background: $color-toggle;
+        }
+        
+        .bottom {        
+          transform: translateY(-1.85rem) translateX(0) rotate(-45deg);
+          background: $color-toggle;
+        }
+      }
+
+      span {
+        background: $color-toggle;
+        border: none;
+        height: 0.6rem;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.35s ease;
+
+        &:nth-of-type(2) {
+          top: 1.9rem;
+        }
+
+        &:nth-of-type(3) {
+          top: 3.7rem;
+        }
+      }
+    }  
+
+  .nav-link {
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-right: 3.5rem;
+    padding: 0.5rem 0.5rem;
+    @include trans();
+
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0rem;
+      background: #ffda1a;
+      @include trans();
+    }
+
+    &:hover::before {
+      height: 0.5rem;
+    }
+  } 
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+}
+
+@import "_mediaQuery";
+// //=======================================================================================
