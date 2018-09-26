@@ -285,6 +285,111 @@ body {
     }
   }
 }
+/* <-------------------- 5.Title-Section  --------------------------->*/
+.newstitle {
+  font-size: 4rem;
+  color: #2d5898;
+  letter-spacing: 1.43px;
+  margin-bottom: 2.8rem;
+}
+/* <------------------------- 6.Articles --------------------------->*/
+.news-section {
+  padding: 0rem 3rem;
+}
+.newsy {
+  &__box {
+    width: 100%;
+    height: 30.4rem;
+    background-color: #303030;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3.3rem;
+    &--bg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info-fill {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      355deg,
+      rgba(255, 218, 26, 0.95) 0%,
+      rgba(217, 202, 2, 0.8) 100%
+    );
+    padding: 7rem 5rem 2rem;
+
+    &--img {
+      width: 8rem;
+      margin-bottom: 1rem;
+    }
+    &--title {
+      font-size: 2.4rem;
+      color: #2d5898;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    padding: 2.5rem;
+    top: 16.2rem;
+
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      rgba(45, 88, 152, 0) 0%,
+      rgba(45, 88, 152, 0.8) 38%
+    );
+
+    &--date {
+      opacity: 0.8;
+      font-size: 1.4rem;
+      line-height: 2.3rem;
+      margin-bottom: 1rem;
+    }
+    &--title {
+      display: block;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 2.3rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
+    }
+    &--icon {
+      font-size: 1.4rem;
+      color: #ffda1a;
+
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      & img {
+        width: 3rem;
+        height: 2.5rem;
+        margin: 0rem 0.3rem;
+      }
+    }
+
+    &--description {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      margin-bottom: 3rem;
+    }
+    &--button {
+      width: 10rem;
+      height: 3rem;
+      border-radius: 15px;
+      border: none;
+      background-color: #ffda1a;
+      font-size: 1.4rem;
+      color: #030303 !important;
+    }
+  }
+}
+
 
 @import "_mediaQuery";
 // //=======================================================================================
