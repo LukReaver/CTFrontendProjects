@@ -1,0 +1,39 @@
+/*
+1.LayoutWidth
+2.Global
+3.NavTop
+4.Header
+5.NavMid
+6.Section 
+7 Footer
+8.@media
+*/
+
+/* <------------------- 1.LayoutWidth ----------------------->*/
+@media (min-width: 940px) {
+  .container {
+    max-width: 970px;
+  }
+}
+/* <---------------------- 2.Global -------------------------->*/
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ol,
+ul {
+  list-style: none;
+}
+/* <------------------------ 3.Navtop -------------------------->*/
+
+
