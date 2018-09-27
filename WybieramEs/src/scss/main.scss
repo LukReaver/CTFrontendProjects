@@ -157,3 +157,69 @@ ul {
     left: 50%;
   }
 }
+
+/* <------------------------- 4.Header --------------------------->*/
+
+
+header {
+  padding: 1.9rem 0rem;
+  border-bottom: 1px solid #e4e4e4;
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 2.8rem;
+  }
+  p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.9rem;
+    text-align: justify;
+    color: #666;
+  }
+  span {
+    color: #af0061;
+  }
+}
+/* <---------------------- 5.NavMid --------------------------->*/
+
+
+.navmid {
+  padding: 2rem 0rem;
+  border-bottom: 1px solid #e4e4e4;  
+
+  .nav-link {
+    font-size: 1.5rem;
+    margin-right: 1.3rem;
+    line-height: 3.2rem;
+    border: 1px solid #e4e4e4;
+    width: 21.6rem;
+    height: 4.4rem;
+    text-align: center;
+    color: #af0061;
+    &:hover {
+      background-color: #af0061;
+      color: #fff;
+      transition: all 0.2s ease-in-out;
+    }
+    .fas {
+      margin-left: 1rem;
+      font-size: 2rem;
+    }
+  }
+  .dropdown-menu {
+    width: calc(100% - 1.3rem);
+    line-height: 3.2rem;
+    font-size: 1.5rem;
+  }
+  .dropdown-item {
+    &:hover {
+      background-color: #af0061;
+      color: #fff;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
