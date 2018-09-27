@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="15px" viewBox="0 0 23 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>people</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="GRAFIKA" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="strona-główna--wyspa" transform="translate(-430.000000, -1501.000000)" fill="#FFDA1A">
+            <g id="Polecane-wydarzenia" transform="translate(-20.000000, 693.000000)">
+                <g id="EVENTY">
+                    <g id="5-HOVER" transform="translate(420.000000, 556.000000)">
+                        <g id="people" transform="translate(30.043500, 252.000000)">
+                            <g id="Group" transform="translate(11.239251, 0.000000)">
+                                <path d="M4.5978755,9 C3.06525033,9 1.8391502,9.4 0.9195751,9.9 C2.35002526,11.1 2.96307532,12.5 3.06525033,12.6 L3.16742535,12.8 L3.16742535,15 L11.3414262,15 L11.3414262,13 C11.2392512,13 9.60445105,9 4.5978755,9 L4.5978755,9 Z" id="Shape"></path>
+                                <ellipse id="Oval" cx="4.5978755" cy="3.5" rx="3.57612539" ry="3.5"></ellipse>
+                            </g>
+                            <path d="M3.06525033,3.5 C3.06525033,1.6 4.70005051,0 6.64137572,0 C8.58270094,0 10.2175011,1.6 10.2175011,3.5 C10.2175011,5.4 8.58270094,7 6.64137572,7 C4.70005051,7 3.06525033,5.4 3.06525033,3.5 L3.06525033,3.5 Z M6.64137572,9 C1.63480018,9 0,13 0,13 L0,15 L13.2827514,15 L13.2827514,13 C13.2827514,13 11.6479513,9 6.64137572,9 L6.64137572,9 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
