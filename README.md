@@ -1,6 +1,4 @@
-# CTFrontendProjects
-
- Projekty powstały w ramach bootcampu Frontend-owego.
+# Website projects
 
 [Wroclaw w formie](https://lukreaver.github.io/Website-projects/Wroclaw-w-formie/dist/);
 
