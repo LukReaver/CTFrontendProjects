@@ -1,0 +1,305 @@
+@import "_varibles";
+@import "_mixin";
+@import "_animation";
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1600px;
+    // max-width: 1366px;
+  }
+}
+
+//=========================== Help Class ==============================
+.flexcenter{
+  @include flexcenter;
+}
+
+//=========================== Global ==============================
+html {
+  font-size:calc(16% + 0.5vw)
+  // line-height: calc(1.1em + 0.5vw);
+  // font-size: 50%;
+} body {
+  // background: $prim-color;
+  background: #202020;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body1 {
+  background: url("../img/bg3.jpg") no-repeat center center fixed ;
+}
+.body2 {
+  background: url("../img/bikeimg2/bg4.jpeg") no-repeat center center fixed;
+}
+.body1 ,
+.body2 ,
+.body3 ,
+.body4{
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  &--bg {
+    height: 100vh;    
+    // background-repeat: no-repeat;
+    // background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+//=========================== Container ==============================
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  // overflow: hidden;
+}
+//=========================== LOGO ==============================
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 10rem;
+  margin: 3rem;
+  cursor: pointer;
+  background: url("../img/logoalfa2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:hover {
+    border-radius: 50%;
+    animation: logoPulse 2s ease-in-out;
+  }
+}
+//=========================== BANNER ==============================
+.wrapper {
+  height: 100vh;
+ @include flexcenter;
+}
+
+.baner {
+  // width: 65rem;
+  // height: 65rem;
+  width: 60rem;
+  height: 60rem;
+
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-areas:
+    "g1 g1 g1 g1 g2 g2"
+    "g1 g1 g1 g1 g2 g2"
+    "g5 g5 g3 g3 g2 g2"
+    "g5 g5 g3 g3 g2 g2"
+    "g5 g5 g4 g4 g4 g4"
+    "g5 g5 g4 g4 g4 g4";
+
+  transform: rotate(45deg);
+  animation: banerSpin 1000ms cubic-bezier(0.28, 1.17, 0.54, 1.03);
+
+  &__box {
+    position: relative;
+    overflow: hidden;
+
+    &--one {
+      grid-area: g1;
+      // border-bottom-right-radius: 100%;
+      clip-path: polygon(20% 30%, 100% 0, 100% 100%, 0% 100%);
+      animation: one 3500ms cubic-bezier(1, 0.03, 0.9, 0.48);
+      @include backgroundPhoto("../img/mb1.jpg", 100%);
+      transform-origin: 100% 100%;
+      transform: scale(1.15, 1.1);
+      &:hover {
+        cursor: pointer;
+        transform-origin: 100% 100%;
+        transform: scale(1.2, 1.2);
+      }
+    }
+    &--two {
+      grid-area: g2;
+      clip-path: polygon(70% 20%, 0 0, 0% 100%, 100% 100%);
+      animation: two 3600ms cubic-bezier(1, 0.03, 0.9, 0.48);
+      transform-origin: 0% 100%;
+      transform: scale(1, 1.15);
+      &:before {
+        @include rotateBackground(210%, -90deg, "../img/r4.jpg", 100%);
+      }
+      &:hover {
+        cursor: pointer;
+        transform-origin: 0% 100%;
+        transform: scale(1.2, 1.2);
+      }
+    }
+    &--three {
+      grid-area: g3;
+      background-color: black;
+      animation: logoPulse 1500ms linear 1.3s;
+      border: 1px solid $green;
+      &:before {
+        @include rotateBackground(200%, -45deg, "../img/logoBlack2.png", 55%);
+      }
+      &:hover {
+        border: 2px solid $green;
+      }
+      &:hover:before {
+        @include backgroundPhoto("../img/logoBlack2g.png", 55%);
+      }
+    }
+
+    &--four {
+      grid-area: g4;
+      clip-path: polygon(100% 0, 80% 70%, 0 100%, 0 0);
+      animation: four 3700ms cubic-bezier(1, 0.03, 0.9, 0.48);
+      @include backgroundPhoto("../img/r1.jpeg", 100%);
+      transform-origin: 0% 0%;
+      transform: scale(1.15, 1);
+      &:hover {
+        cursor: pointer;
+        transform-origin: 0% 0%;
+        transform: scale(1.2, 1.2);
+      }
+    }
+    &--five {
+      grid-area: g5;
+      clip-path: polygon(100% 0, 100% 100%, 30% 80%, 0 0);
+      animation: five 3800ms cubic-bezier(1, 0.03, 0.9, 0.48);
+      transform-origin: 100% 0%;
+      transform: scale(1, 1.15);
+      &:before {
+        @include rotateBackground(210%, -90deg, "../img/r5.jpg", 100%);
+      }
+      &:hover {
+        cursor: pointer;
+        transform-origin: 100% 0%;
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+}
+//=========================== Navigation ==============================
+.navWrap {
+  background: rgba($green, 0.55);
+}
+.nav {
+  height: 100vh;
+  min-height: 80rem;
+  @include flexcenter;
+
+  &__item {
+    @include flexcenter;
+    font-size: 2.9rem;
+    width: 15rem;
+    height: 14rem;
+    cursor: pointer;
+    margin: -2rem;
+
+    &:nth-of-type(even) {
+      position: relative;
+      right: 2.5rem;
+    }
+    &:nth-of-type(odd) {
+      position: relative;
+      right: -2.5rem;
+    }
+
+    &--mod {
+      @include flexcenter;
+
+      color: $green;
+      background-color: #303030;
+
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+      &::after {
+        @include buttonAnimB(0.4s);
+        transform: rotate(45deg);
+      }
+      &::before {
+        @include buttonAnimT(0.9s);
+        transform: rotate(45deg);
+      }
+      &:hover::before {
+        width: 70%;
+        box-shadow: 0px 8px 20px -2px rgba(0, 0, 0, 0.95);
+      }
+      &:hover::after {
+        width: 70%;
+        box-shadow: 10px 2px 20px -3px rgba(0, 0, 0, 0.95);
+      }
+
+      &:nth-of-type(odd) {
+        &:hover {
+          transform-origin: 0% 50%;
+          transform: scale(1.2, 1.2);
+        }
+      }
+      &:nth-child(even) {
+        &:hover {
+          transform-origin: 100% 50%;
+          transform: scale(1.2, 1.2);
+        }
+      }
+    }
+  }
+}
+//=========================== Galery ==============================
+.galery-sectiom{
+
+  height: 100vh;
+
+}
+.galeryWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: rgba($green, 0.85);
+  // background: rgba(rgb(255, 255, 255), 1);
+  // padding: 2.7rem;  
+ height: auto;
+
+  display: grid;
+  grid-gap: 0.5rem;
+  // grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(6 , 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr,;
+  // grid-template-rows: repeat(6 , 1fr);
+  grid-auto-rows: 12vh;
+  // grid-auto-flow: dense;
+
+
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    &:hover{
+      position: relative;   
+      z-index: 1000;     
+      transform: scale(1.2);
+      border : 0.2rem solid #000; 
+    }
+  }
+  
+  &__item {
+    width: 100%;
+    height: 100%;
+
+    &--horizontal {
+      grid-column: span 2;
+    }
+    &--vertical {
+      grid-row: span 2;
+    }
+    &--big {
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+  }
+}

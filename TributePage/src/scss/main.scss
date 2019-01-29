@@ -1,0 +1,455 @@
+/*
+1.Global;
+2.Header;
+3.Biography;
+4.Gallery;
+5.Quotes;
+6.Footer;
+7.MediaQueries;
+*/
+
+/* <------------------------- 1.Global --------------------------->*/
+
+html {  
+  font-size: calc(2% + 0.5vw);
+  scroll-behavior: smooth
+}
+
+body {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  max-width: 1920px;
+  margin: 0 auto;
+  // background: url(../img/dark-grey-terrazzo.png);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* <------------------------- 1.Header --------------------------->*/
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/Vinczi2second.jpg) center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+
+  .banner {
+    width: 70rem;
+    height: auto;
+    background: linear-gradient(to bottom, #e0ceaa23 0%, #e0ceaa 31%, #e0ceaa 74%, #e0ceaa21 99%);
+    color: #000000;
+    position: absolute;
+    bottom: 23%;
+    right: 7.5%;
+    padding: 4rem;
+    text-align: center;
+
+    &__btn {
+      width: 18rem;
+      height: 8rem;
+      border: 1px solid #000;
+      margin: 2.5rem 4rem;
+      display: inline-block;
+      color: #000;
+      font-size: 4rem;
+      line-height: 7.5rem;
+      text-align: center;
+      text-decoration: none;
+      transition: 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        color: #ccc;
+        z-index: 10;
+
+        &:before {
+          width: 100%;
+        }
+
+        &:after {
+          width: 100%;
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -0.5rem;
+        z-index: -10;
+        width: 0%;
+        height: 100%;
+        background: #000;
+        transition: 0.3s ease-out;
+        clip-path: polygon(0 0, 20% 0, 100% 100%, 0% 100%);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: -0.5rem;
+        z-index: -10;
+        width: 0%;
+        height: 100%;
+        background: #000;
+        transition: 0.3s ease-out;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 79% 100%);
+      }
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+
+      &--main {
+        font-size: 9.5rem;
+        line-height: 13rem;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+      }
+
+      &--sub {
+        font-size: 7.5rem;
+        line-height: 10rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__scrollup {
+    position: fixed;
+    right: 4rem;
+    bottom: 7rem;
+    z-index: 99999;
+    border: none;
+    border-radius: 50%;
+    display: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--icon {
+      font-size: 8rem;
+      color: #000;
+      padding: 0.5rem 1.8rem;
+      cursor: pointer;
+      border-radius: 50%;
+      background: #ccc;
+      // display: none;
+
+      &:hover {
+        box-shadow: 0px 4px 19px -7px rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+}
+/* <------------------------- 2.Biography --------------------------->*/
+
+.Biography {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  min-height: 80rem;
+  background: url(../img/Vinczi1first.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 5rem;
+  display: grid;
+  grid-template-areas: "title title""time desc""time desc";
+  grid-column-gap: 5rem;
+  grid-row-gap: 0rem;
+
+  &__title {
+    grid-area: title;
+    font-size: 11rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &__dataTime {
+    grid-area: time;
+    position: relative;
+    
+    &:hover {     
+      z-index: 2000 !important;
+    }
+    &--img {
+      width: 100%;
+      max-width: 150%;
+      display: block;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+      
+      &:hover {    
+        width: 150%;       
+      }
+    }
+    
+    &:hover .Biography__dataTime--caption {
+      left: 75%;
+    }
+    
+    &--caption {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      text-align: center;
+      font-size: 3.3rem;
+      transition: all 0.3s ease-in-out;
+
+    }
+  }
+  
+  &__description {
+    grid-area: desc;
+    font-size: 3.3rem;
+    line-height: 4.5rem;
+    background: linear-gradient(to bottom, #e0ceaa23 0%, #e0ceaa 31%, #e0ceaa 74%, #e0ceaa21 99%);
+    color: rgb(0, 0, 0);
+    padding: 1rem 5rem;
+    
+    &:hover {
+      background: linear-gradient(to bottom, #e0ceaab2 0%, #e0ceaa 31%, #e0ceaa 74%, #e0ceaac4 99%);
+    }
+    
+    & a {
+      color: rgb(0, 0, 0);
+      
+      &:focus,
+      &:visited {
+        color: rgb(0, 0, 0);
+      }
+      
+      &:hover {
+        color: rgb(255, 255, 0);
+        background: none;
+      }
+      
+      &:hover {
+        background: linear-gradient(to bottom, #e0ceaabb 0%, #e0ceaa 31%, #e0ceaa 74%, #e0ceaabb 99%);
+      }
+    }
+  }
+}
+/* <------------------------- 2.Gallery --------------------------->*/
+
+.gallery-section {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  min-height: 80rem;
+  background: url(../img/daVinczi2-min.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__title {
+    font-size: 11rem;
+    text-align: left;
+  }
+
+  .galery {
+    width: 80vw;
+
+    display: grid;
+    display: -ms-grid;
+
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 20vh;
+    -ms-grid-rows: 20vh 20vh 20vh 20vh;
+    -ms-grid-auto-flow: dense;
+    grid-auto-flow: dense;
+   
+
+    img {
+      width: 100%;
+      display: block;
+      height: 100%;
+      background: rgb(60, 90, 11);
+    }
+
+    &__item {
+      width: auto;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:hover {
+        &:nth-child(odd) img {
+          animation: photoHoverR 1000ms forwards;
+        }
+
+        &:nth-child(even) img {
+          animation: photoHoverL 1000ms forwards;
+        }
+      }
+
+      &--horizontal {
+        grid-column: span 2;
+        -ms-grid-column-span: 2;
+      }
+
+      &--vertical {
+        grid-row: span 2;
+        -ms-grid-row-span: 2;
+      }
+
+      &--big {
+        grid-row: span 2;
+        -ms-grid-row-span: 2;
+        grid-column: span 2;
+        -ms-grid-column-span: 2;
+      }
+    }
+  }
+}
+
+
+/* <------------------------- 4.Quotes --------------------------->*/
+
+.yellow {
+  color: yellow;
+}
+
+.quote1 {
+  width: 100%;
+  height: 20vw;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center; // padding: 1rem 8rem;
+  color: #ccc;
+  font-weight: bold;
+  overflow: hidden;
+
+  .quotation {
+    font-size: 5.5rem;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+
+  .quotation:before {
+    content: open-quote;
+    display: inline;
+    height: 0;
+    line-height: 0;
+    left: -0.1rem;
+    position: relative;
+    top: 7rem;
+    color: #ccc;
+    font-size: 3em;
+  }
+
+  .quotation::after {
+    content: close-quote;
+    display: inline;
+    height: 0;
+    line-height: 0;
+    left: 0.1rem;
+    position: relative;
+    top: 11rem;
+    color: #ccc;
+    font-size: 3em;
+  }
+
+  footer {
+    margin: 0;
+    text-align: right;
+    font-size: 4.5em;
+    font-style: italic;
+  }
+}
+/* <------------------------- 5.Footer --------------------------->*/
+.footer {
+  width: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  
+  &__title {
+    display: block;
+    font-size: 5.5em;
+    color: #ccc;
+  }
+  
+  &__socials {
+    display: block;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+
+    &--icon {
+      width: 22rem;
+      height: 17rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      overflow: hidden;
+      transition: 0.2s ease-in-out;
+
+      a {
+        text-decoration: none;
+      }
+
+      i {
+        color: #ccc;
+        font-size: 12rem;
+        display: block;
+        padding: 6rem;
+      }
+
+      &:hover {
+        &:nth-of-type(1) {
+          background: #f6f6f6;
+
+          i {
+            color: #1a1a1a !important;
+          }
+        }
+
+        &:nth-child(2) {
+          background: #4668b3;
+        }
+
+        &:nth-child(3) {
+          background: #3095d3;
+        }
+
+        &:nth-child(4) {
+          background: #d94348;
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: block;
+    font-size: 4em;
+    color: #ccc;
+    text-align: center;
+  }
+}
+
+@import "_mediaQuery";

@@ -1,0 +1,25 @@
+// Extra small devices (portrait phones, less than 576px)
+
+
+@mixin media-breakpoint-up ($resol){
+    @media (min-width: $resol) { @content;}
+    
+}
+
+  
+@mixin flexcenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+// <!-- ----------- navIcon ----------- -->
+
+@mixin centerAbsolute($width,$height){
+    position: absolute;
+    top: $height;
+    left: $width;
+    transform: translate(-50%, -50%);
+
+}

@@ -1,0 +1,233 @@
+//@import "_varibles";
+//@import "_mixin";
+
+//@import "_animation"; 
+/*
+1.Global;
+2.Navbar;
+3.Header;
+4.Features;
+5.Video-team;
+6.Screenshots;
+7.Plans;
+8.Contact;
+9.MediaQueries;
+*/
+/* <------------------------- 1.Global --------------------------->*/
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  max-width: 1920px;
+}
+
+/* <------------------------- 1.Navbar --------------------------->*/
+
+.main-nav {
+  height: 100vh;
+  width: 25%;
+  background: rgb(6, 80, 149);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+
+  &__logo {
+    background: yellow;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 2rem 0rem;
+    border-bottom: 0.1rem solid #000;
+  }
+
+  & .nav {
+    padding: 2rem 2rem;
+
+    &-item {
+      padding: 0.5rem 0rem;
+      margin: 0.5rem 0rem;
+      border-bottom: 0.1rem solid #000;
+    }
+    
+    &-link {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      transition: 0.3s ease-in-out;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background: yellow;
+        transition: 0.2s ease-in-out;
+      }
+
+      &:hover::before {
+        width: 4%;
+      }
+
+      &:hover {
+        padding-left: 2rem;
+      }
+    }
+  }
+}
+.navbar{
+  .navbar-toggler { 
+    border: none;
+    height: 4.5rem;
+    width: 6rem;
+    // position: relative;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  .animated-icon {
+    width: 100%;
+    height: 100%;
+    // position: absolute;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  .animated-icon span {
+    display: block;
+    position: absolute;
+    height: 0.5rem;
+    width: 100%;
+    border-radius: 0.9rem;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+
+  .animated-icon span {
+    background: black;
+  }
+
+  .animated-icon span:nth-child(1) {
+    top: 0rem;
+  }
+
+  .animated-icon span:nth-child(2),
+  .animated-icon span:nth-child(3) {
+    top: 1.5rem;
+  }
+
+  .animated-icon span:nth-child(4) {
+    top: 3rem;
+  }
+
+  .animated-icon.open span:nth-child(1) {
+    top: 1.1rem;
+    width: 0%;
+    left: 50%;
+  }
+
+  .animated-icon.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .animated-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .animated-icon.open span:nth-child(4) {
+    top: 1.1rem;
+    width: 0%;
+    left: 50%;
+  }
+}
+.main {
+  border-left: 0.1rem solid #000;
+  padding: 3rem;
+  
+  h1 {
+    font-size: 5.5rem;
+    line-height: 6.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 4rem 0rem;
+    margin-bottom: 2rem;
+    background: yellow;
+  }
+  &-section {
+   
+    & header {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      font-weight: 700;
+    }
+
+    & p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    ul {
+      padding-left: 3rem;
+    }
+
+    ul>li {
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+      text-decoration: none;
+      padding: 0.5rem 0rem;
+    }
+
+    code {
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+      display: block;
+      color: greenyellow;
+      padding: 1rem 1rem;
+      width: 100%;
+      background: #000;
+      margin: 1rem 0rem;
+    }
+  }
+
+}
+
+/* <------------------------- 10.media-query--------------------------->*/
+@import "_mediaQuery";

@@ -1,0 +1,89 @@
+
+/* ---------------------------------------- */
+@media (max-width: 1920px) {
+  html {
+    font-size: calc(35% + 0.3vw);
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    // font-size: calc(25% + 0.3vw);
+  }
+}
+
+@media (max-width: 992px) {
+  html {   
+    // font-size: calc(20% + 0.3vw);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: calc(24% + 0.8vw);
+  }
+
+  .main-nav {
+    height: auto;
+    width: 100%;
+    text-align: center;   
+    position: static;
+    top: 0;
+    left: 0;  
+  }  
+  
+  .main-nav__logo{
+    border-bottom: 3px solid #000;
+    line-height: 3rem;
+  }
+  
+  .navbar {
+    text-align: center !important;
+    & .navbar-collapse {
+      padding: 0rem 2rem;
+      
+      & .nav-item {
+        padding: 0.2rem;    
+        
+        & .nav-link {
+          line-height: 3rem;         
+          font-size: 2.5rem !important;    
+          color: #000;      
+          border-bottom: 1px solid #000;         
+        }
+      }      
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  html {  
+    font-size: calc(30% + 0.7vw);
+  }
+
+  .main {    
+    
+    h1 {
+      font-size: 3.5rem;    
+    }
+  }
+
+  .navbar {
+    text-align: center !important;
+    & .navbar-collapse {
+      padding: 0rem 2rem;
+      
+      & .nav-item {
+        padding: 0.2rem;    
+        
+        & .nav-link {
+          line-height: 3rem;         
+          font-size: 2.5rem !important;    
+          color: #000;      
+          border-bottom: 1px solid #000;         
+        }
+      }      
+    }
+  }
+  
+}

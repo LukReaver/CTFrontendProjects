@@ -1,0 +1,266 @@
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+
+/* ---------------------------------------- */
+@media (min-width: 1920px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media (max-width: 1920px) {
+  html {
+    font-size: calc(5% + 0.5vw);
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: calc(20% + 0.3vw);
+  }
+
+  .header .navbar {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1025px) {
+  html {
+    font-size: calc(5% + 0.5vw);
+  }
+
+  .header .navbar {
+    font-size: 2.8rem;
+  }  
+
+  .project-one:nth-of-type(2) {  
+    padding-top: 25rem !important;
+  }
+  .project-one {
+    &__img {
+      &--description {
+        & .link-button {
+          padding: 2.3rem 2.4rem;
+          &__img {
+            width: 9rem !important;
+          }
+        }
+
+        & .link-title {
+          font-size: 5.5rem !important;
+          padding: 0.5rem 3rem;
+        }
+      }
+    }
+  }
+
+  .project-two {
+    &__img {
+      &--description {
+        & .link-button {
+          padding: 2.3rem 2.4rem;
+          &__img {
+            width: 9rem !important;
+          }
+        }
+
+        & .link-title {
+          font-size: 5.5rem !important;
+          padding: 0.5rem 3rem;
+        }
+      }
+    }
+  }
+
+  .contact {
+    &-box {
+      width: 80%;
+    }
+
+    &__title {
+      &--title {
+        font-size: 5.5rem;
+        line-height: 6.5rem;
+      }
+
+      &--line {
+        width: 30rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__form {
+      margin: 0 auto;
+      width: 80%;
+
+      &--input {
+        font-size: 3.6rem;
+      }
+
+      &--button {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .footer {
+    .kontakt {
+      &__item {
+        font-size: 3rem;
+      }
+    }
+
+    .social {
+      &__item {
+        width:  15rem;      
+      }
+    }
+
+    .autor {
+      &__item {
+        font-size: 3rem;
+      }
+    }
+  }
+
+
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: calc(5% + 0.5vw);
+  }
+
+  .header .navbar {
+    font-size: 7.5rem;
+
+    &-nav {
+      margin: 0 !important;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 20rem !important;
+
+      & .nav-item {
+        padding: 1rem 2.3rem;
+
+        & .nav-link {
+          display: inline-block;
+          padding: 1.5rem 1.2rem;
+        }
+      }
+    }
+  }
+
+  
+}
+
+@media only screen and(max-width: 576px) {
+  html {
+    // font-size: 62.5%;
+    // font-size: calc(9% + 0.5vw);
+  }
+
+  .header {
+    .navbar {
+      font-size: 7.5rem;
+      padding: 5.5rem 5rem;
+
+      .navbar-toggler {
+        height: 7rem;
+        width: 9.5rem;
+      }
+    }
+
+    &__text-box {
+      @include centerAbsolute(60%, 50%);
+
+      &--description {
+        font-size: 4.5rem;
+      }
+    }
+  }
+
+  .contact {
+    &-box {
+      width: 90%;
+    }
+
+    &__title {
+      &--title {
+        font-size: 9.5rem;
+        line-height: 8.5rem;
+      }
+
+      &--line {
+        width: 40rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__form {
+      margin: 0 auto;
+      width: 90%;
+
+      &--input {
+        font-size: 5.6rem;
+        padding: 1.5rem 1rem;
+      }
+
+      &--button {
+        font-size: 6.8rem;
+      }
+    }
+  }
+
+  .footer {
+    padding: 4rem 0rem;
+
+    &__col{
+      padding-right: 5px !important;
+      padding-left: 5px !important;
+    }
+
+    .kontakt {
+      &__item {
+        font-size: 3.5rem;
+        white-space: nowrap;
+      }
+    }
+
+    .social {
+      &__item {
+        width:  16rem;       
+      }
+    }
+
+    .autor {
+      &__item {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+}
+
+@media only screen and(max-height:420px) and(max-width:900px) and(orientation:landscape) {
+  .contact {
+    &__title {
+      &--title {
+        font-size: 5.5rem;
+      }
+    }
+    &__form {
+      &--input {
+        font-size: 3.3rem;
+      }
+      &--button {
+        font-size: 4.8rem;
+      }
+    }
+  }
+}

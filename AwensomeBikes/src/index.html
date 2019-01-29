@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AwensomBike</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+      integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="<%=htmlWebpackPlugin.files.chunks.main.css %>"
+    />
+    <script
+      defer
+      src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"
+    ></script>
+  </head>
+
+  <body>
+    <section class="body1 body1--bg " id="page1">
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-9">
+            <div class="wrapper">
+              <div class="logo"><a href="#"></a></div>
+
+              <div class="baner">
+                <div class="baner__box baner__box--one">sdfdsf</div>
+                <div class="baner__box baner__box--two"></div>
+                <div class="baner__box baner__box--three"></div>
+                <div class="baner__box baner__box--four"></div>
+                <div class="baner__box baner__box--five"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 d-none d-sm-none d-md-none d-lg-block">
+            <nav class="nav flex-column">
+              <ul class="navWrap">
+                <li class="nav__item nav__item--mod">Home</li>
+                <li class="nav__item nav__item--mod">Bikes</li>
+                <li class="nav__item nav__item--mod">Technology</li>
+                <li class="nav__item nav__item--mod">Galery</li>
+                <li class="nav__item nav__item--mod">About</li>
+                <li class="nav__item nav__item--mod">Contact</li>
+              </ul>
+            </nav>
+            <!-- <ul class="nav flex-column"> -->
+            <!-- <nav class="navWrap">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#">Disabled</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link " href="#">Disabled</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#">Disabled</a>
+                            </li>
+                            
+                        </nav> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="body2 body2--bg " id="page2">
+      <div class="container flexcenter">
+        <div class="row">
+          <div class="col-lg-9 flexcenter">
+            <div class="galeryWrapper ">
+              <div class="galeryWrapper__item galeryWrapper__item--big">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b2.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b9.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item galeryWrapper__item--vertical">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg/bv1.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item galeryWrapper__item--horizontal">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b3.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class="galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b4.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item galeryWrapper__item--vertical ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/bv11.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b6.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b6.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item galeryWrapper__item--big ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b7.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b7.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b8.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b7.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b8.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item galeryWrapper__item--vertical ">
+                <img
+                  class="galeryWrapper__img lozad"
+                  data-src="<%= require('./img/bikeimg/bv2.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item  ">
+                <img
+                  class="galeryWrapper__img lozad"
+                  data-src="<%= require('./img/bikeimg2/b11.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item galeryWrapper__item--vertical ">
+                <img
+                  class="galeryWrapper__img lozad"
+                  data-src="<%= require('./img/bikeimg2/bv22.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div
+                class=" galeryWrapper__item  galeryWrapper__item--horizontal lozad"
+              >
+                <img
+                  class="galeryWrapper__img lozad"
+                  data-src="<%= require('./img/bikeimg2/b12.jpg') %>"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class=" galeryWrapper__item galeryWrapper__item--vertical lozad"
+              >
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/bv11.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b15.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class="galeryWrapper__item galeryWrapper__item--big">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b5.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item galeryWrapper__item--horizontal">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b10.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b4.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img lozad"
+                  data-src="<%= require('./img/bikeimg2/b4.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b14.jpg') %>"
+                  alt=""
+                />
+              </div>
+              <div class=" galeryWrapper__item ">
+                <img
+                  class="galeryWrapper__img  lozad"
+                  data-src="<%= require('./img/bikeimg2/b2.jpg') %>"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 d-none d-sm-none d-md-none d-lg-block">
+            <nav class="nav flex-column">
+              <ul class="navWrap">
+                <li class="nav__item nav__item--mod">Home</li>
+                <li class="nav__item nav__item--mod">Bikes</li>
+                <li class="nav__item nav__item--mod">Technology</li>
+                <li class="nav__item nav__item--mod">Galery</li>
+                <li class="nav__item nav__item--mod">About</li>
+                <li class="nav__item nav__item--mod">Contact</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

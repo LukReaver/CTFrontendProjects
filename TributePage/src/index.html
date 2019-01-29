@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leonardo da Vinci</title>
+    <meta
+      name="description"
+      content="Italian polymath of the Renaissance, whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography."
+    />
+    <!-- Font Amatic -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <!--  -->
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/jsgallery.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="<%=htmlWebpackPlugin.files.chunks.main.css %>"
+    />
+  </head>
+  <body>
+    <!-- -------------  Header  ------------ -->
+    <header class="header" id="header">
+      <div class="banner hide" data-animate="fadeIn">
+        <h1 class="banner__title" id="title">
+          <span class="banner__title--main " data-animate="fadeInLeft"
+            >Leonardo da Vinci</span
+          >
+          <span class="banner__title--sub" data-animate="fadeInRight"
+            >1452 - 1519</span
+          >
+        </h1>
+        <nav data-animate="fadeInUp">
+          <a href="#" class="banner__btn " id="biographyBtn">Biography</a>
+          <a href="#" class="banner__btn" id="galeryBtn">Galery</a>
+        </nav>
+      </div>
+      <a class="header__scrollup" href="#header"
+        ><i class="header__scrollup--icon fas fa-angle-up"></i>
+      </a>
+    </header>
+    <!-- -------------  Quote1  ------------ -->
+    <article class="quote1">
+      <blockquote data-animate="fadeInUp">
+        <p class="quotation">
+          <span class="yellow">Learning</span> is the only thing the mind <br />
+          <span class="yellow"> never exhausts, never fears,</span> and
+          <span class="yellow">never regrets.</span>
+        </p>
+        <footer>—— Leonardo da Vinci</footer>
+      </blockquote>
+    </article>
+    <!-- -------------  Main  ------------ -->
+    <main id="main">
+      <section class="Biography" id="Biography">
+        <h2 class="Biography__title" data-animate="fadeInUp">Biography:</h2>
+        <figure
+          id="img-div"
+          class="Biography__dataTime"
+          data-animate="fadeInUp"
+        >
+          <img
+            id="image"
+            class="Biography__dataTime--img lozad"
+            data-src="<%= require('./img/datimeline-min.png')%>"
+            alt="data Time Line"
+          />
+          <figcaption id="img-caption" class="Biography__dataTime--caption">
+            Data Time Line
+          </figcaption>
+        </figure>
+        <article
+          id="tribute-info"
+          class="Biography__description"
+          data-animate="fadeInUp"
+        >
+          <a
+            id="tribute-link"
+            href="https://en.wikipedia.org/wiki/Leonardo_da_Vinci"
+            target="_blank"
+          >
+            Leonardo da Vinci</a
+          >
+          (1452-1519) was a painter, architect, inventor, and student of all
+          things scientific. His natural genius crossed so many disciplines that
+          he epitomized the term “Renaissance man.” Today he remains best known
+          for his art, including two paintings that remain among the world’s
+          most famous and admired, Mona Lisa and The Last Supper. Art, da Vinci
+          believed, was indisputably connected with science and nature. Largely
+          self-educated, he filled dozens of secret notebooks with inventions,
+          observations and theories about pursuits from aeronautics to anatomy.
+          But the rest of the world was just beginning to share knowledge in
+          books made with moveable type, and the concepts expressed in his
+          notebooks were often difficult to interpret. As a result, though he
+          was lauded in his time as a great artist, his contemporaries often did
+          not fully appreciate his genius—the combination of intellect and
+          imagination that allowed him to create, at least on paper, such
+          inventions as the bicycle, the helicopter and an airplane based on the
+          physiology and flying capability of a bat.
+        </article>
+      </section>
+    </main>
+    <!-- -------------  Quote2  ------------ -->
+    <article class="quote1">
+      <blockquote>
+        <p class="quotation">
+          I have been impressed with the urgency of doing.<span class="yellow"
+            >Knowing</span
+          >
+          is not enough;<br />
+          we must apply.<span class="yellow"> Being willing</span> is not
+          enough.<span class="yellow"> We must do.</span>
+        </p>
+        <footer>—— Leonardo da Vinci</footer>
+      </blockquote>
+    </article>
+
+    <!-- -------------  Gallery  ------------ -->
+    <section class="gallery-section" id="gallery">
+      <h2 class="gallery-section__title" data-animate="fadeInUp">Galery</h2>
+      <div class="galery" data-animate="fadeInUp">
+        <div class="galery__item galery__item--big ">
+          <img
+            class="galery__img  lozad"
+            data-src="<%= require('./img/mlyn1.jpg')%>"
+            alt=""
+          />
+        </div>
+        <div class="galery__item ">
+          <img
+            class="galery__img  lozad"
+            data-src="<%= require('./img/bronMechaniczna1.png')%>"
+            alt=""
+          />
+        </div>
+        <div class=" galery__item ">
+          <img
+            class="galery__img  lozad"
+            data-src="<%= require('./img/czolg1.jpg')%>"
+            alt=""
+          />
+        </div>
+        <div class=" galery__item">
+          <img
+            class="galery__img lozad"
+            data-src="<%= require('./img/helikoptr1.jpg')%>"
+            alt=""
+          />
+        </div>
+        <div class="galery__item galery__item--horizontal">
+          <img
+            class="galery__img lozad"
+            data-src="<%= require('./img/kombinezonNurk1.jpg')%>"
+            alt=""
+          />
+        </div>
+        <div class=" galery__item ">
+          <img
+            class="galery__img lozad"
+            data-src="<%= require('./img/ornichopter1.jpeg')%>"
+            alt=""
+          />
+        </div>
+        <div class=" galery__item ">
+          <img
+            class="galery__img lozad"
+            data-src="<%= require('./img/robot1.jpg')%>"
+            alt=""
+          />
+        </div>
+        <div class=" galery__item ">
+          <img
+            class="galery__img lozad"
+            data-src="<%= require('./img/spadochron1.jpg')%>"
+            alt=""
+          />
+        </div>
+        <div class=" galery__item ">
+          <img
+            class="galery__img lozad"
+            data-src="<%= require('./img/human2.jpg')%>"
+            alt=""
+          />
+        </div>
+        <div class=" galery__item ">
+          <img
+            class="galery__img  lozad"
+            data-src="<%= require('./img/machine2.jpg')%>"
+            alt=""
+          />
+        </div>
+        <div class="galery__item galery__item--vertical ">
+          <img
+            class="galery__img  lozad"
+            data-src="<%= require('./img/samojezdne1.jpg')%>"
+            alt=""
+          />
+        </div>
+        <div class="galery__item galery__item--horizontal ">
+          <img
+            class="galery__img lozad"
+            data-src="<%= require('./img/lotnia1.jpg')%>"
+            alt=""
+          />
+        </div>
+        <div class=" galery__item ">
+          <img
+            class="galery__img  lozad"
+            data-src="<%= require('./img/weapon2.jpg')%>"
+            alt=""
+          />
+        </div>
+        <div class=" galery__item ">
+          <img
+            class="galery__img  lozad"
+            data-src="<%= require('./img/violaOrganista1.png')%>"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------  Footer  ------------ -->
+    <footer class="footer">
+      <h2 class="footer__title" data-animate="fadeInUp">
+        If you want more information about Leonardo Da Vinci go to the links
+        below:
+      </h2>
+      <ul class="footer__socials" data-animate="fadeInUp">
+        <li class="footer__socials--icon">
+          <a
+            href="https://pl.wikipedia.org/wiki/Leonardo_da_Vinci"
+            target="_blank"
+            ><i class="fab fa-wikipedia-w"></i
+          ></a>
+        </li>
+        <li class="footer__socials--icon">
+          <a href="https://www.facebook.com/leonardo.page/" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+        <li class="footer__socials--icon">
+          <a href="https://twitter.com/davincisecrets" target="_blank">
+            <i class="fab fa-twitter-square"></i
+          ></a>
+        </li>
+        <li class="footer__socials--icon">
+          <a
+            href="https://www.youtube.com/results?search_query=Leonarda+Da+Vinci"
+            target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </li>
+      </ul>
+      <div class="footer__info">
+        Project & code by Łukasz Onak &copy; 2018 Thanks for visit!
+      </div>
+    </footer>
+    <!-- -------------------- Script  --------------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/jquery.viewportchecker.min.js"
+    ></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jsgallery.min.js"></script>
+    <script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  </body>
+</html>

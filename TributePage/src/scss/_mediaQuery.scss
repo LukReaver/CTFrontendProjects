@@ -1,0 +1,94 @@
+/* ---------------------------------------- */
+@media (min-width: 1920px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media (max-width: 1920px) {
+  html {
+    font-size: calc(2% + 0.5vw);
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+  }
+}
+
+@media (max-width: 1025px) {
+  html {
+  }
+  .header {
+    .banner {
+      width: 100rem;
+
+      &__btn {
+        width: 28rem;
+        height: 11rem;
+        font-size: 8rem;
+        padding: 1.5rem;
+      }
+
+      &__title {
+        &--main {
+          font-size: 13.5rem;
+        }
+
+        &--sub {
+          font-size: 10.5rem;
+        }
+      }
+    }
+  }
+
+  .Biography {
+    overflow: hidden;
+    height: auto;
+    grid-template-areas:
+      "title title"
+      "time time"
+      "desc desc";
+
+    &__dataTime {
+      height: auto;
+
+      &--img {
+        width: 90%;
+        margin: 0 auto;
+        &:hover {
+          width: 90%;
+        }
+      }
+      &:hover .Biography__dataTime--caption {
+        left: 50%;
+      }
+    }
+
+    &__description {
+      height: auto;
+      font-size: 4.5rem;
+      line-height: 5rem;
+    }
+  }
+
+  .gallery-section {
+    height: auto;
+    min-height: 80rem;
+
+    .galery {
+      grid-auto-rows: 20vh;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: calc(5% + 0.5vw);
+  }
+}

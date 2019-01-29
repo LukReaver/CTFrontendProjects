@@ -1,0 +1,80 @@
+@keyframes banerSpin {
+  0% {
+    transform: scale(0.2) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(765deg);
+  }
+}
+@keyframes logoPulse {
+  0% {
+    /* ... */
+    box-shadow: 0px 0px 0px 0px rgba($green, 0.7), 0px 0px 0px 0px rgba($green, 0.7)  ;
+   }
+40% {
+    box-shadow: 0px 0px 0px 40px rgba($green, 0), 0px 0px 0px 0px rgba($green, 0.7)  ;
+    
+}
+80% {
+    box-shadow: 0px 0px 0px 40px rgba($green, 0), 0px 0px 0px 25px rgba($green, 0)  ;
+  
+    
+}
+100% {
+    box-shadow: 0px 0px 0px  0px rgba($green, 0), 0px 0px 0px 25px rgba($green, 0)  ;  
+}
+}
+@keyframes one {
+  0% {
+    /* ... */
+    opacity: 0;
+    transform: translateY(-2000px) rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes two {
+  0% {
+    /* ... */
+    opacity: 0;
+    transform: translateX(2000px) rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes four {
+  0% {
+    /* ... */
+    opacity: 0;
+    transform: translateY(1000px) rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes five {
+  0% {
+    /* ... */
+    opacity: 0;
+    transform: translateX(-2000px) rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes navFill {
+  0% {
+    /* ... */   
+    width: 0%
+  }
+  100% {
+    width: 100%
+  }
+}
