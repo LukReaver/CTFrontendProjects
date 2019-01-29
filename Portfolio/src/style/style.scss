@@ -495,11 +495,23 @@ a:focus {
       top: 10%;
     }
   }
+  .project-six {
+    & .imgBox {
+      height: 40rem;
+      &:hover {
+        z-index: 5000 !important;
+      }
+    }
+
+    &__img {
+      top: 10%;
+    }
+  }
 
   .project-one:nth-of-type(2) {  
       padding-top: 11rem;
     }
-  .project-five:nth-of-type(6) {  
+  .project-six:nth-of-type(7) {  
       padding-bottom: 5rem;
     }
 }
