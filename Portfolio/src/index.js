@@ -2,7 +2,6 @@ if (module.hot) {
   module.hot.accept();
 }
 
-// import "./css/animate.css";
 import "./style/style.scss";
 import lozad from 'lozad'
 

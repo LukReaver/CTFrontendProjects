@@ -651,15 +651,14 @@ a:focus {
 .footer {
   width: 100%;
   background: #2c2a2b;
-  padding: 2rem;
-  // color: lighten($light-gray,20%);
+  padding: 2rem; 
   color: ($light-gray);
 
   .kontakt {
     list-style: none;
 
     &__item {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
   }
 
@@ -671,33 +670,13 @@ a:focus {
     align-items: center;
 
     &__item {
-      width:  8rem;
+      width:  9rem;
       color: $white;
       filter: invert(0.9);
       &:hover{
         filter: invert(1);
       }  
     }
-
-    // &__item:hover:nth-child(1) a {
-    //   color: #417cc8;
-    // }
-
-    // &__item:hover:nth-child(2) a {
-    //   color: #d3c619;
-    // }
-
-    // &__item:hover:nth-child(3) a {
-    //   color: #e25e47;
-    // }
-
-    // &__item:hover:nth-child(4) a {
-    //   color: #a13724;
-    // }
-
-    // &__item:hover:nth-child(5) a {
-    //   color: #1d6813;
-    // }
   }
 
   .autor {
@@ -705,7 +684,7 @@ a:focus {
     text-align: right;
 
     &__item {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
   }
 }
